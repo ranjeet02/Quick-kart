@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./image/logo.jpg" type="image/x-icon">
+    <title>Quick Kart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="top" class="col-xs-12">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Quick with <b style="color: rgba(243, 79, 34, 0.863);">Quick</b>
+                        Kart </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="padding: 10px; margin-right: 50px;">
+                    <li>
+                        <button onclick="document.getElementById('id01').style.display='block'" style="background-color: green; border-radius: 5px;">Signup</button>
+                        <button onclick="document.getElementById('id02').style.display='block'" style="background-color: rgb(126, 128, 0);border-radius: 5px;">login</button>
+                    </li>
+                </ul>
+
+                <!-- <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+                    <li><a href="./login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul> -->
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div class="top1" style="top: 0.1; position: fixed; margin-top: -140px; width: 100%; height: 75px; text-align: center; background-color: rgb(161, 249, 127); font-size: 30px; z-index: 3;">
+    <h2><b style="color: rgba(243, 90, 34, 0.863);">Quick</b> Kart</h2>
+    </div>
+    <!-- <div id="header"><b style="color: rgba(243, 90, 34, 0.863);">Quick</b> Kart</div> -->
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <form class="modal-content" action="/action_page.php">
+                    <div class="container">
+                        <h1>Sign Up</h1>
+                        <p>Please fill in this form to create an account.</p>
+                        <hr>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                            Remember me
+                        </label>
+
+                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
+                                Privacy</a>.</p>
+
+                        <div class="clearfix">
+                            <button style="background-color:rgba(215, 46, 46, 0.815); color: rgb(253, 253, 254); border-radius: 8px;padding: 10px;" type="button" onclick="document.getElementById('id01').style.display='none'"
+                                class="cancelbtn">Cancel</button>
+                            <button style="background-color:rgba(74, 215, 46, 0.815); color: rgb(253, 253, 254); border-radius: 8px; padding: 10px;" type="button" onclick="document.getElementById('id01').style.display='none'"
+                                class="cancelbtn">signup</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>&nbsp;&nbsp;
+        <script>
+            
+        </script>
+        <li>
+            <div id="id02" class="modal">
+
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <!-- <img src="" alt="Avatar" class="avatar"> -->
+                    </div>
+
+                    <div class="container">
+                        <h3>Please Login</h3>
+                        <p>Please fill in this form to access your account.</p><br><hr>
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required><br><hr>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember">Remember me
+                        </label><br>
+                        <button style="background-color:rgba(62, 62, 247, 0.815); color: rgb(253, 253, 254); border-radius: 3px;" type="submit">Login</button>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button style="background-color:rgba(215, 46, 46, 0.815); color: rgb(253, 253, 254); border-radius: 8px; padding: 10px;" type="button" onclick="document.getElementById('id01').style.display='none'"
+                                class="cancelbtn">cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+
+
+        </li>
+        <script>
+            
+        </script>
+    </ul>
+    <!-- from here the main content is running -->
+
+    <div style="margin-top:200px;font-size:25px">
+        <div class="container">
+            <h3 class="h3">Men's Clothing</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/images1.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li> -->
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul> -->
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Man's shirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>Rs-3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/images2.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li> -->
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul> -->
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Boys dress</a></h3>
+                            <div class="price">Rs-1500
+                                <span>Rs-3000</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/images3.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li> -->
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul> -->
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Man's shirt's</a></h3>
+                            <div class="price">Rs-1000
+                                <span>Rs-2000</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/images4.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <!-- <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li> -->
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">80%</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul> -->
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Man's shirt's</a></h3>
+                            <div class="price">Rs-3000
+                                <span>Rs-5000</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/images5.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Man's shirt's</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/images6.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Man's shirt's</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/images7.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Man's shirt's</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/images8.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Man's shirt's</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="h3">Women's clothing</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/download1.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Womens skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/download2.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Womens skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/download3.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Womens skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/download4.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Womens skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/download5.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Womens skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/download6.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Womens skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/download7.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Womens skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/download8.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Womens skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h3 class="h3">Kid's clothing's</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/kids1.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Girl's skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/kids2.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Girl's skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/kids3.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Girl's skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/kids4.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Girl's skirt</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/kids5.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Boys dress</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/kids6.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Boys dress</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/kids7.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Boys dress</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/kids8.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Man's jeans</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h3 class="h3">Footwear</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/footwear1.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Footwear</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/footwear2.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Footwear</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/footwear3.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Footwear</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/footwear4.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Footwear</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/footwear5.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Ladies Footwear</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/footwear6.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Ladies Footwear</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/footwear7.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Ladies Footwear</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/footwear8.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Ladies Footwear</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h3 class="h3">khadi cloth's</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/khadi1.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Mens khadi</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/khadi2.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Mens khadi</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/khadi3.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Mens khadi</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/khadi4.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Mens khadi</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/khadi5.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Ladies khadi</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/khadi6.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Ladies khadi</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/khadi7.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Ladies khadi</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="./image/khadi8.jpeg">
+                                <!-- <img class="pic-2" src="https://www.w3schools.com/bootstrap4/img_avatar3.png"> -->
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Ladies khadi</a></h3>
+                            <div class="price">Rs-2500
+                                <span>3500</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+        <footer>
+            <div class="col-sx-12" style="background-color:#2874f0; width: 100%; height: 200px;"></div>
+        </footer>
+        </div>
+        <script>
+           
+        </script>
+        <footer>
+            <p>copyright@2022</p>
+            <p>Author: Ranjeet kumar jha<br>
+            <a href="imranjeet002@gmail.com">www.Quickkart.com</a></p>
+
+        </footer>
+          <script src="./index.js"></script>
+</body>
+
+</html>
